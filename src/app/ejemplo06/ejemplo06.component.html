@@ -1,1 +1,19 @@
-<p>ejemplo06 works!</p>
+<h1>Ejemplo 6</h1>
+
+<h2>Convertidor USD/CUP</h2>
+USD:
+<input
+  #entradaUSD
+  (keyup)="actualizarCUP(entradaUSD.value)"
+  [value]="usd"
+  type="text">
+<br>
+
+CUP:
+<input
+  #entradaCUP
+  (keyup)="actualizarUSD(entradaCUP.value)"
+  [value]="cup"
+  type="text">
+<br>
+<button (click)="limpiarValores()">Reset</button>

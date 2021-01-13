@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Ejemplo06Component implements OnInit {
 
-  constructor() { }
+  usd : number;
+  cup : number;
+
+  constructor() {
+    
+   this.usd = 0;
+   this.cup = 0;
+
+   }
 
   ngOnInit(): void {
+  }
+
+  limpiarValores(){
+    this.usd = 0;
+    this.cup = 0;
+  }
+
+  actualizarUSD(cup:string){
+    this.usd = Number(cup)/24;
+  }
+  actualizarCUP(usd:string){
+    this.cup = Number(usd)*24;
   }
 
 }
